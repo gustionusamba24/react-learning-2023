@@ -47,15 +47,18 @@ const ProductsPage = () => {
         </Button>
       </div>
       <div className="flex justify-center py-5">
-        {products.map((product) => (
-          <CardProduct key={product.id}>
-            <CardProduct.Header image={product.image} />
-            <CardProduct.Body name={product.name}>
-              {product.description}
-            </CardProduct.Body>
-            <CardProduct.Footer price={product.price} />
-          </CardProduct>
-        ))}
+        <div className="w-3/4 flex flex-w">
+          {products.map((product) => (
+            <CardProduct key={product.id}>
+              <CardProduct.Header image={product.image} />
+              <CardProduct.Body name={product.name}>
+                {product.description}
+              </CardProduct.Body>
+              <CardProduct.Footer price={product.price} />
+            </CardProduct>
+          ))}
+        </div>
+        <div className="w-1/4"></div>
       </div>
     </Fragment>
   );
